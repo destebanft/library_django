@@ -1,5 +1,6 @@
 from django.db import models
 from applications.author.models import Author
+from .managers import BookManager
 # Create your models here.
 
 
@@ -18,11 +19,13 @@ class Book(models.Model):
     )
     authors = models.ManyToManyField(Author)
     title = models.CharField(
-        max_length = 50 
+        max_length = 50
     )
     date = models.DateField('Publication Date')
     cover_page = models.ImageField(upload_to = 'cover_page')
     views = models.PositiveIntegerField()
+
+    objects = BookManager()
 
     def __str__(self):
         return self.title

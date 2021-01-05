@@ -1,6 +1,7 @@
 from django.db import models
-
+from .managers import AuthorManager
 # Create your models here.
+
 
 
 class Author(models.Model):
@@ -18,6 +19,8 @@ class Author(models.Model):
     )
     age = models.PositiveIntegerField()
 
+    objects = AuthorManager()
+
     def __str__(self):
         return self.name + ' ' + self.last_name
     '''
@@ -27,6 +30,5 @@ class Author(models.Model):
         verbose_name = 'MODELNAME'
         verbose_name_plural = 'MODELNAMEs'
 
-    
-    '''    
 
+    '''

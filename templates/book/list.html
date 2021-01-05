@@ -1,0 +1,16 @@
+<h1>List of the books</h1>
+
+<p>
+  <form class="" method="GET">
+    <input type="text" id="kword" name="kword" placeholder="Enter the title" />
+    <input type="date" name="date_1" id="date_1"/>
+    <input type="date" name="date_2" id="date_2"/>
+    <button type="submit">Search</button>
+  </form>
+</p>
+
+<ul>
+  {% for a in list_books %}
+    <li>{{ a.title }} {{ a.date }}</li>
+  {% endfor%}
+</ul>
