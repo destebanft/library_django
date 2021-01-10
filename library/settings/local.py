@@ -15,8 +15,8 @@ DATABASES = {
         'NAME': 'library', #'NAME': BASE_DIR / 'db.sqlite3'
         'USER': 'esteban',
         'PASSWORD': 'Sopra2020*-*',
-        'HOST': '192.168.5.85',
-        'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '33060',
     }
 }
 
